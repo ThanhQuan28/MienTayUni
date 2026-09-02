@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đề Thi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              eduPrimary: "#1E40AF",
+              eduSecondary: "#2563EB",
+              eduLightBg: "#E0F2FE",
+              eduAccent: "#0284C7",
+              eduEmerald: "#059669",
+              eduAmber: "#D97706",
+              offwhite: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 via-sky-100 to-indigo-50 text-slate-800 font-sans flex flex-col min-h-screen text-base"
+  >
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 shadow-md bg-white">
+      <!-- Hàng 1: Tiêu đề & Logo -->
+      <div class="border-b border-slate-100 py-3.5 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 cursor-pointer group"
+          >
+            <div
+              class="bg-eduPrimary text-white px-4 py-2 rounded-xl font-black text-2xl tracking-widest shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300"
+            >
+              MITAU
+            </div>
+            <div>
+              <span
+                class="text-2xl font-black tracking-tight block text-eduPrimary"
+                >MienTayUni</span
+              >
+              <span class="text-sm text-slate-600 font-semibold block -mt-1"
+                >Hệ Thống Tra Cứu & Hướng Nghiệp ĐBSCL</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Hàng 2: Thanh Tab Tính Năng -->
+      <div
+        class="border-b border-blue-100 py-2.5 px-4 bg-white/95 backdrop-blur-md"
+      >
+        <div class="max-w-7xl mx-auto">
+          <nav
+            class="flex items-center justify-start space-x-3 md:space-x-5 overflow-x-auto py-1"
+          >
+            <a href="index.html" class="nav-btn">
+              <i class="fa-solid fa-house text-base mr-2"></i>Trang chủ
+            </a>
+            <a href="diemchuan.html" class="nav-btn">
+              <i class="fa-solid fa-graduation-cap text-base mr-2"></i>Điểm
+              Chuẩn 2026
+            </a>
+            <a href="tinhdiem.html" class="nav-btn">
+              <i class="fa-solid fa-calculator text-base mr-2"></i>Công cụ tính
+              điểm
+            </a>
+            <a href="dean.html" class="nav-btn">
+              <i class="fa-solid fa-newspaper text-base mr-2"></i>Cổng thông tin
+            </a>
+            <a href="dethi.html" class="nav-btn active-nav">
+              <i class="fa-solid fa-file-pdf text-base mr-2"></i> Đề thi THPT
+              Quốc Gia
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main
+      class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8"
+    >
+      <!-- DANH SÁCH ĐỀ THI CHO NGUỜI DÙNG XEM VÀ TẢI -->
+      <section
+        class="bg-white rounded-3xl p-6 sm:p-8 shadow-md border-2 border-blue-200 space-y-6"
+      >
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-5"
+        >
+          <div>
+            <h2 class="text-2xl font-black text-eduPrimary flex items-center">
+              <i class="fa-solid fa-folder-open text-eduSecondary mr-3"></i>
+              Kho Đề Thi THPT Quốc Gia Cập Nhật Theo Từng Năm
+            </h2>
+            <p class="text-slate-600 text-sm font-medium mt-1">
+              Thí sinh có thể xem trực tiếp hoặc tải đề thi dạng PDF hoàn toàn
+              miễn phí.
+            </p>
+          </div>
+        </div>
+
+        <!-- BẢNG DANH SÁCH ĐỀ THI PDF -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr
+                class="bg-slate-100/80 text-slate-700 text-xs font-bold uppercase tracking-wider border-b border-slate-200"
+              >
+                <th class="p-4">STT</th>
+                <th class="p-4">Tên Tài Liệu</th>
+                <th class="p-4">Môn Thi</th>
+                <th class="p-4">Dung Lượng</th>
+                <th class="p-4 text-center">Thao Tác</th>
+              </tr>
+            </thead>
+            <!-- Danh sách đề thi -->
+            <!-- Ngữ Văn -->
+            <tbody
+              class="divide-y divide-slate-100 text-sm font-medium text-slate-800"
+            >
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">01</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề Thi THPT Quốc Gia 2026 - Môn Ngữ Văn</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Ngữ Văn</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">255 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Van 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Van 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Toán Học -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">02</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Toán Học</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: ToanMath.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Toán Học</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">2.229 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Toan 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Toan 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Tiếng Anh -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">03</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Tiếng Anh</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Tiếng Anh</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">252 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Tieng Anh 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Tieng Anh 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Lịch Sử -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">04</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Lịch Sử</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Lịch Sử</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">256 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Su 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Su 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Sinh Học -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">05</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Sinh Học</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Sinh Học</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">463 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Sinh 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Sinh 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Vật Lí -->
+            </tbody>
+
+            <tbody
+              class="divide-y divide-slate-100 text-sm font-medium text-slate-800"
+            >
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">06</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề Thi THPT Quốc Gia 2026 - Môn Vật Lí</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Vật Lí</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">323 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Li 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Li 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Hóa Học -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">07</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Hóa Học</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Hóa Học</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">511 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Hoa 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Hoa 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Giáo Dục Kinh Tế Và Pháp Luật -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">08</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Giáo Dục Kinh Tế Và Pháp
+                    Luật</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Giáo Dục Kinh Tế Và Pháp Luật</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">223 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT GDKT PL 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT GDKT PL 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Địa Lí -->
+            </tbody>
+
+            <tbody
+              class="divide-y divide-slate-100 text-sm font-medium text-slate-800"
+            >
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">09</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề Thi THPT Quốc Gia 2026 - Môn Địa Lí</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Thuvienhoclieu.com • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Địa Lí</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">311 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Dia 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Dia 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Tin Học -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">10</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Tin Học</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Đang cập nhật • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Tin Học</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">0 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT Tin 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT Tin 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Công Nghệ Nông Nghiệp -->
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">11</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề thi THPT Quốc Gia 2026 - Môn Công Nghệ Nông Nghiệp</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Đang cập nhật • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Công Nghệ Nông Nghiệp</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">0 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT CN NN 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT CN NN 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Công Nghệ Công Nghiệp -->
+            </tbody>
+
+            <tbody
+              class="divide-y divide-slate-100 text-sm font-medium text-slate-800"
+            >
+              <tr class="hover:bg-blue-50/50 transition">
+                <td class="p-4 font-mono font-bold text-slate-400">12</td>
+                <td class="p-4">
+                  <span class="font-bold text-eduPrimary block"
+                    >Đề Thi THPT Quốc Gia 2026 - Môn Công Nghệ Công Nghiệp</span
+                  >
+                  <span class="text-xs text-slate-500"
+                    >Nguồn: Đang cập nhật • Định dạng: PDF</span
+                  >
+                </td>
+                <td class="p-4">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded-lg font-bold"
+                    >Công Nghệ Công Nghiệp</span
+                  >
+                </td>
+                <td class="p-4 text-slate-500 font-mono text-xs">0 KB</td>
+                <td class="p-4 text-center">
+                  <div class="flex items-center justify-center space-x-2">
+                    <a
+                      href="pdf/THPT CN CN 26.pdf"
+                      target="_blank"
+                      class="bg-sky-100 hover:bg-sky-200 text-eduPrimary font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center"
+                    >
+                      <i class="fa-solid fa-eye mr-1.5"></i> Xem
+                    </a>
+                    <a
+                      href="pdf/THPT CN CN 26.pdf"
+                      download
+                      class="bg-eduPrimary hover:bg-blue-900 text-white font-bold text-xs px-3 py-2 rounded-xl transition inline-flex items-center shadow-sm"
+                    >
+                      <i class="fa-solid fa-download mr-1.5"></i> Tải về
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-white border-t-2 border-blue-200 text-slate-700 mt-12 shadow-inner"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div class="flex items-center space-x-3">
+            <div
+              class="bg-eduPrimary text-white px-3.5 py-2 rounded-lg font-black text-xl tracking-widest"
+            >
+              MITAU
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-eduPrimary">MienTayUni</h3>
+              <p class="text-xs text-slate-600 font-medium">
+                Nền Tảng Hỗ Trợ Tuyển Sinh Đại Học Khu Vực Đồng Bằng Sông Cửu
+                Long
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-100 border border-blue-300 text-eduPrimary px-4 py-2 rounded-xl font-bold text-xs tracking-wider shadow-sm"
+          >
+            <i class="fa-solid fa-code mr-1.5 text-eduSecondary"></i> Công Cụ
+            Thiết Kế Bởi MienTayUni
+          </div>
+        </div>
+
+        <!-- Dòng chú thích miễn trừ trách nhiệm được chuyển xuống cuối trang -->
+        <div
+          class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-center text-xs font-semibold text-amber-900"
+        >
+          <i class="fa-solid fa-circle-info mr-1.5 text-amber-600"></i>
+          Thông tin cập nhật trên website được tổng hợp từ trang chính thức của
+          các Trường Đại học. MITAU không chịu hoàn toàn trách nhiệm về sự sai
+          sót.
+        </div>
+
+        <div
+          class="pt-4 border-t border-slate-200 text-center text-xs text-slate-500 font-medium"
+        >
+          <p>
+            © 2026 MienTayUni (MITAU). Dữ liệu được cập nhật từ thông báo điểm
+            chuẩn chính thức của các trường ĐH Miền Tây.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

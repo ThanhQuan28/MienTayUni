@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MienTayUni (MITAU) - Cổng Tra Cứu Tuyển Sinh & Điểm Chuẩn Miền Tây 2026
+    </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              eduPrimary: "#1E40AF",
+              eduSecondary: "#2563EB",
+              eduLightBg: "#E0F2FE",
+              eduAccent: "#0284C7",
+              eduEmerald: "#059669",
+              eduAmber: "#D97706",
+              offwhite: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 via-sky-100 to-indigo-50 text-slate-800 font-sans flex flex-col min-h-screen text-base"
+  >
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 shadow-md bg-white">
+      <!-- Hàng 1: Tiêu đề & Logo -->
+      <div class="border-b border-slate-100 py-3.5 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 cursor-pointer group"
+          >
+            <div
+              class="bg-eduPrimary text-white px-3.5 sm:px-4 py-2 rounded-xl font-black text-xl sm:text-2xl tracking-widest shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300"
+            >
+              MITAU
+            </div>
+            <div>
+              <span
+                class="text-xl sm:text-2xl font-black tracking-tight block text-eduPrimary"
+                >MienTayUni</span
+              >
+              <span
+                class="text-xs sm:text-sm text-slate-600 font-semibold block -mt-1"
+                >Hệ Thống Tra Cứu & Hướng Nghiệp ĐBSCL</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Hàng 2: Thanh Tab Tính Năng -->
+      <div
+        class="border-b border-blue-100 py-2.5 px-2 sm:px-4 bg-white/95 backdrop-blur-md"
+      >
+        <div class="max-w-7xl mx-auto">
+          <nav
+            class="flex items-center justify-start space-x-2 sm:space-x-3 md:space-x-5 overflow-x-auto py-1 no-scrollbar"
+          >
+            <a href="index.html" class="nav-btn active-nav">
+              <i
+                class="fa-solid fa-house text-sm sm:text-base mr-1.5 sm:mr-2"
+              ></i
+              >Trang chủ
+            </a>
+            <a href="diemchuan.html" class="nav-btn">
+              <i
+                class="fa-solid fa-graduation-cap text-sm sm:text-base mr-1.5 sm:mr-2"
+              ></i
+              >Điểm Chuẩn 2026
+            </a>
+            <a href="tinhdiem.html" class="nav-btn">
+              <i
+                class="fa-solid fa-calculator text-sm sm:text-base mr-1.5 sm:mr-2"
+              ></i
+              >Công cụ tính điểm
+            </a>
+            <a href="dean.html" class="nav-btn">
+              <i
+                class="fa-solid fa-newspaper text-sm sm:text-base mr-1.5 sm:mr-2"
+              ></i
+              >Cổng thông tin
+            </a>
+            <a href="dethi.html" class="nav-btn">
+              <i
+                class="fa-solid fa-file-pdf text-sm sm:text-base mr-1.5 sm:mr-2"
+              ></i
+              >Đề thi THPT Quốc Gia
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main
+      class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8"
+    >
+      <!-- TỔNG QUAN -->
+      <section
+        id="sec-tongquan"
+        class="tab-content block space-y-6 sm:space-y-8 animate-fadeIn"
+      >
+        <!-- ĐỒNG HỒ ĐẾM NGƯỢC THI THPT QUỐC GIA 2027 -->
+        <div
+          class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl text-center border-2 border-blue-400/30 space-y-5 sm:space-y-6 relative overflow-hidden"
+        >
+          <div class="space-y-2">
+            <span
+              class="inline-block bg-amber-400 text-slate-900 font-black text-[11px] sm:text-xs uppercase px-3.5 py-1.5 rounded-full shadow-md tracking-wider animate-bounce"
+            >
+              <i class="fa-solid fa-clock mr-1.5"></i> Đếm ngược thời gian
+            </span>
+            <h3
+              class="text-xl sm:text-3xl font-black tracking-tight text-white"
+            >
+              KỲ THI THPT QUỐC GIA 2027
+            </h3>
+            <p class="text-blue-200 text-xs sm:text-sm font-semibold">
+              Thời gian dự kiến diễn ra:
+              <span class="text-amber-300 font-bold"
+                >11/06/2027 và 12/06/2027</span
+              >
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto"
+          >
+            <div
+              class="bg-white/10 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/20 shadow-inner"
+            >
+              <span
+                id="cd-days"
+                class="text-2xl sm:text-5xl font-black text-amber-300 block font-mono"
+                >00</span
+              >
+              <span
+                class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-blue-200 mt-1 block"
+                >Ngày</span
+              >
+            </div>
+            <div
+              class="bg-white/10 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/20 shadow-inner"
+            >
+              <span
+                id="cd-hours"
+                class="text-2xl sm:text-5xl font-black text-amber-300 block font-mono"
+                >00</span
+              >
+              <span
+                class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-blue-200 mt-1 block"
+                >Giờ</span
+              >
+            </div>
+            <div
+              class="bg-white/10 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/20 shadow-inner"
+            >
+              <span
+                id="cd-minutes"
+                class="text-2xl sm:text-5xl font-black text-amber-300 block font-mono"
+                >00</span
+              >
+              <span
+                class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-blue-200 mt-1 block"
+                >Phút</span
+              >
+            </div>
+            <div
+              class="bg-white/10 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/20 shadow-inner"
+            >
+              <span
+                id="cd-seconds"
+                class="text-2xl sm:text-5xl font-black text-amber-300 block font-mono"
+                >00</span
+              >
+              <span
+                class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-blue-200 mt-1 block"
+                >Giây</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Khung Giới thiệu chính -->
+        <div
+          class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-md border-2 border-blue-200 space-y-6 hover:shadow-xl transition-all duration-300"
+        >
+          <div class="border-b border-slate-100 pb-5">
+            <span
+              class="bg-blue-100 text-eduPrimary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2 shadow-sm"
+            >
+              Giới thiệu hệ thống
+            </span>
+            <h2
+              class="text-2xl sm:text-3xl font-black text-eduPrimary tracking-tight"
+            >
+              Chào mừng bạn đến với MienTayUni (MITAU)
+            </h2>
+            <p
+              class="text-slate-600 mt-2 font-semibold text-base sm:text-lg leading-relaxed"
+            >
+              Nền tảng tra cứu điểm chuẩn, công cụ tính điểm xét tuyển và tổng
+              hợp đề án tuyển sinh chính thức của các Trường Đại học khu vực
+              Đồng Bằng Sông Cửu Long.
+            </p>
+          </div>
+          <!-- BỔ SUNG THÊM THÔNG TIN MỚI CHO INDEX.HTML -->
+          <div
+            class="bg-gradient-to-r from-blue-50 to-sky-50 rounded-2xl p-5 border border-blue-200 space-y-3"
+          >
+            <h3 class="text-lg font-bold text-eduPrimary flex items-center">
+              <i class="fa-solid fa-circle-check text-eduEmerald mr-2"></i> Vai
+              Trò & Sứ Mệnh Của MienTayUni (MITAU)
+            </h3>
+            <p class="text-sm text-slate-700 leading-relaxed font-medium">
+              MienTayUni (MITAU) không phải là website chính thức của Trường Đại
+              học nào. Đây là website được phát triển dưới hình thức cá nhân lập
+              nên. Nhằm mục đích hỗ trợ các thí sinh có thể tra cứu nhanh kết
+              quả xét tuyển năm gần nhất và xem được về thi THPT Quốc Gia mới
+              nhất. MienTayUni có thể cập nhật thông tin muộn vì một số lí do
+              khách quan. Nhưng MITAU sẽ cố gắng cập nhật nhanh nhất có thể.
+            </p>
+          </div>
+          <!-- Các tính năng cốt lõi -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div
+              class="p-5 bg-sky-50 rounded-2xl border border-sky-200 space-y-2 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-eduPrimary text-white rounded-xl flex items-center justify-center text-xl font-bold mb-3 shadow-md"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-800">
+                Tra cứu nhanh chóng
+              </h3>
+              <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                Cập nhật chính xác điểm chuẩn năm 2026 của các trường Đại học
+                tại Miền Tây theo từng ngành, tỉnh thành và phương thức xét
+                tuyển.
+              </p>
+            </div>
+            <div
+              class="p-5 bg-emerald-50 rounded-2xl border border-emerald-200 space-y-2 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-3 shadow-md"
+              >
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-800">
+                Tính điểm & Gợi ý
+              </h3>
+              <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                Tích hợp công cụ tính điểm xét tuyển theo tổ hợp môn, đánh giá
+                mức độ an toàn và kết nối trực tiếp đến cổng tính điểm chính
+                thức của từng trường.
+              </p>
+            </div>
+            <div
+              class="p-5 bg-amber-50 rounded-2xl border border-amber-200 space-y-2 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-amber-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-3 shadow-md"
+              >
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-800">
+                Thông tin Đề án 2026
+              </h3>
+              <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                Nơi tổng hợp đề án tuyển sinh, chi tiết phương thức xét tuyển và
+                hỗ trợ xem trực tiếp file PDF chính thức công bố từ các trường
+                Đại học.
+              </p>
+            </div>
+          </div>
+          <!-- Thống kê số liệu hệ thống -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-4 border-t border-slate-100 text-center"
+          >
+            <div
+              class="p-3.5 sm:p-4 bg-blue-50/60 rounded-xl border border-blue-100"
+            >
+              <span class="text-xl sm:text-2xl font-black text-eduPrimary block"
+                >6</span
+              >
+              <span class="text-[11px] sm:text-xs font-bold text-slate-600"
+                >Trường Đại Học</span
+              >
+            </div>
+            <div
+              class="p-3.5 sm:p-4 bg-blue-50/60 rounded-xl border border-blue-100"
+            >
+              <span class="text-xl sm:text-2xl font-black text-eduPrimary block"
+                >200+</span
+              >
+              <span class="text-[11px] sm:text-xs font-bold text-slate-600"
+                >Ngành Đào Tạo</span
+              >
+            </div>
+            <div
+              class="p-3.5 sm:p-4 bg-blue-50/60 rounded-xl border border-blue-100"
+            >
+              <span class="text-xl sm:text-2xl font-black text-eduPrimary block"
+                >100%</span
+              >
+              <span class="text-[11px] sm:text-xs font-bold text-slate-600"
+                >Dữ Liệu Chính Thức</span
+              >
+            </div>
+            <div
+              class="p-3.5 sm:p-4 bg-blue-50/60 rounded-xl border border-blue-100"
+            >
+              <span class="text-xl sm:text-2xl font-black text-eduPrimary block"
+                >2026</span
+              >
+              <span class="text-[11px] sm:text-xs font-bold text-slate-600"
+                >Cập Nhật Mới Nhất</span
+              >
+            </div>
+          </div>
+          <!-- Giới thiệu vị thế, năng lực các trường đại học ở ĐBSCL -->
+          <div class="space-y-3 pt-2">
+            <h3 class="text-lg font-bold text-slate-800 flex items-center">
+              <i
+                class="fa-solid fa-building-columns text-eduSecondary mr-2"
+              ></i>
+              Vị Thế & Năng Lực Các Trường Đại Học ĐBSCL
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-bold text-eduPrimary block mb-1"
+                  >Trung Tâm Đào Tạo Trọng Điểm</span
+                >
+                <p class="text-xs text-slate-600">
+                  Khu vực ĐBSCL sở hữu hệ thống đại học công lập và chuyên ngành
+                  phát triển mạnh mẽ, dẫn đầu là Đại học Cần Thơ - trung tâm
+                  nghiên cứu khoa học và đào tạo đa ngành hàng đầu vùng.
+                </p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-bold text-eduPrimary block mb-1"
+                  >Chất Lượng Đạt Chuẩn Quốc Tế</span
+                >
+                <p class="text-xs text-slate-600">
+                  Các trường trọng điểm như ĐH Y Dược Cần Thơ, ĐH An Giang (ĐHQG
+                  TP.HCM) và ĐH Trà Vinh liên tục kiểm định quốc tế (AUN-QA,
+                  FIBAA) với đội ngũ giảng viên chuyên môn cao.
+                </p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-bold text-eduPrimary block mb-1"
+                  >Đa Dạng Ngành Nghề Mới</span
+                >
+                <p class="text-xs text-slate-600">
+                  Hệ thống các trường như ĐH Đồng Tháp, ĐH KT-CN Cần Thơ tiên
+                  phong đào tạo Công nghệ thông tin, Vi mạch bán dẫn, Logistics,
+                  Y tế và Sư phạm chất lượng cao.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Danh sách các trường hỗ trợ -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <p class="text-sm font-semibold text-slate-700 mb-2">
+              <i class="fa-solid fa-university text-eduPrimary mr-1.5"></i> Danh
+              sách các Trường Đại học tích hợp trên hệ thống:
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-semibold text-slate-600"
+            >
+              <span
+                class="bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm"
+                >Đại học Cần Thơ (CTU)</span
+              >
+              <span
+                class="bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm"
+                >Trường Đại học Đồng Tháp (DTHU)</span
+              >
+              <span
+                class="bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm"
+                >Trường Đại học An Giang (AGU)</span
+              >
+              <span
+                class="bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm"
+                >Đại học Trà Vinh (TVU)</span
+              >
+              <span
+                class="bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm"
+                >Trường Đại học Y Dược Cần Thơ (CTUMP)</span
+              >
+              <span
+                class="bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm"
+                >Trường Đại học Kỹ thuật Công nghệ Cần Thơ (CTUT)</span
+              >
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex justify-center">
+            <a
+              href="diemchuan.html"
+              class="bg-eduPrimary hover:bg-blue-900 text-white font-bold py-3 sm:py-3.5 px-6 sm:px-8 rounded-xl transition duration-300 shadow-md text-sm sm:text-base inline-block hover:scale-105"
+            >
+              Bắt đầu tra cứu điểm chuẩn
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer
+      class="bg-white border-t-2 border-blue-200 text-slate-700 mt-8 sm:mt-12 shadow-inner"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div class="flex items-center space-x-3">
+            <div
+              class="bg-eduPrimary text-white px-3.5 py-2 rounded-lg font-black text-xl tracking-widest"
+            >
+              MITAU
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-eduPrimary">MienTayUni</h3>
+              <p class="text-xs text-slate-600 font-medium">
+                Nền Tảng Hỗ Trợ Tuyển Sinh Đại Học Khu Vực Đồng Bằng Sông Cửu
+                Long
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-100 border border-blue-300 text-eduPrimary px-4 py-2 rounded-xl font-bold text-xs tracking-wider shadow-sm"
+          >
+            <i class="fa-solid fa-code mr-1.5 text-eduSecondary"></i> Công Cụ
+            Thiết Kế Bởi MienTayUni
+          </div>
+        </div>
+        <div
+          class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-center text-xs font-semibold text-amber-900"
+        >
+          <i class="fa-solid fa-circle-info mr-1.5 text-amber-600"></i>
+          Thông tin cập nhật trên website được tổng hợp từ trang chính thức của
+          các Trường Đại học. MITAU không chịu hoàn toàn trách nhiệm về sự sai
+          sót.
+        </div>
+        <div
+          class="pt-4 border-t border-slate-200 text-center text-xs text-slate-500 font-medium"
+        >
+          <p>
+            © 2026 MienTayUni (MITAU). Dữ liệu được cập nhật từ thông báo điểm
+            chuẩn chính thức của các trường ĐH Miền Tây.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- SCRIPT ĐẾM NGƯỢC 11/06/2027 -->
+    <script>
+      function updateCountdown() {
+        const targetDate = new Date("June 11, 2027 00:00:00").getTime();
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+          document.getElementById("cd-days").innerText =
+            days < 10 ? "0" + days : days;
+          document.getElementById("cd-hours").innerText =
+            hours < 10 ? "0" + hours : hours;
+          document.getElementById("cd-minutes").innerText =
+            minutes < 10 ? "0" + minutes : minutes;
+          document.getElementById("cd-seconds").innerText =
+            seconds < 10 ? "0" + seconds : seconds;
+        }
+      }
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

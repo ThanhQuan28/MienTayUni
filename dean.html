@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đề Án Tuyển Sinh 2026 - MienTayUni (MITAU)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              eduPrimary: "#1E40AF",
+              eduSecondary: "#2563EB",
+              eduLightBg: "#E0F2FE",
+              eduAccent: "#0284C7",
+              eduEmerald: "#059669",
+              eduAmber: "#D97706",
+              offwhite: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 via-sky-100 to-indigo-50 text-slate-800 font-sans flex flex-col min-h-screen text-base"
+  >
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 shadow-md bg-white">
+      <!-- Hàng 1: Tiêu đề & Logo -->
+      <div class="border-b border-slate-100 py-3.5 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 cursor-pointer group"
+          >
+            <div
+              class="bg-eduPrimary text-white px-4 py-2 rounded-xl font-black text-2xl tracking-widest shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform"
+            >
+              MITAU
+            </div>
+            <div>
+              <span
+                class="text-2xl font-black tracking-tight block text-eduPrimary"
+                >MienTayUni</span
+              >
+              <span class="text-sm text-slate-600 font-semibold block -mt-1"
+                >Hệ Thống Tra Cứu & Hướng Nghiệp ĐBSCL</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Hàng 2: Thanh Tab Tính Năng -->
+      <div
+        class="border-b border-blue-100 py-2.5 px-4 bg-white/95 backdrop-blur-md"
+      >
+        <div class="max-w-7xl mx-auto">
+          <nav
+            class="flex items-center justify-start space-x-3 md:space-x-5 overflow-x-auto py-1"
+          >
+            <a href="index.html" class="nav-btn">
+              <i class="fa-solid fa-house text-base mr-2"></i>Trang chủ
+            </a>
+            <a href="diemchuan.html" class="nav-btn">
+              <i class="fa-solid fa-graduation-cap text-base mr-2"></i>Điểm
+              Chuẩn 2026
+            </a>
+            <a href="tinhdiem.html" class="nav-btn">
+              <i class="fa-solid fa-calculator text-base mr-2"></i>Công cụ tính
+              điểm
+            </a>
+            <a href="dean.html" class="nav-btn active-nav">
+              <i class="fa-solid fa-newspaper text-base mr-2"></i>Cổng thông tin
+            </a>
+            <a href="dethi.html" class="nav-btn">
+              <i class="fa-solid fa-file-pdf text-base mr-2"></i>Đề thi THPT
+              Quốc Gia
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main
+      class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6"
+    >
+      <!-- Khung Thông Báo Đang Cập Nhật Đề Án 2027 -->
+      <div
+        class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 flex items-center justify-between shadow-sm"
+      >
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg shrink-0"
+          >
+            <i class="fa-solid fa-hourglass-half fa-spin"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-amber-900 text-sm">
+              Thông báo tuyển sinh 2027
+            </h4>
+            <p class="text-xs text-amber-800 font-medium">
+              Hệ thống đang tiếp tục cập nhật các thông tin và Đề án tuyển sinh
+              dự kiến năm 2027 khi các trường công bố chính thức.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- ĐỀ ÁN TUYỂN SINH 2026 -->
+      <section id="sec-ts2026" class="tab-content block space-y-6">
+        <!-- Khung Tiêu Đề -->
+        <div
+          class="bg-white rounded-2xl p-6 shadow-md border-2 border-blue-200"
+        >
+          <h2 class="text-xl font-bold text-eduPrimary mb-2 flex items-center">
+            <i class="fa-solid fa-newspaper text-eduSecondary mr-2.5"></i>
+            Thông tin đề án tuyển sinh 2026
+          </h2>
+          <p class="text-sm text-slate-600 font-medium">
+            Danh sách phương thức xét tuyển và văn bản Đề án tuyển sinh 2026 từ
+            các trường Đại học khu vực Miền Tây.
+          </p>
+        </div>
+        <!-- Container Render Danh Sách Đề Án 2026 từ JS -->
+        <div
+          id="ts2026-container"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+        ></div>
+      </section>
+
+      <!-- Tin tức -->
+      <section id="sec-ts2026" class="tab-content block space-y-6">
+        <!-- Khung Tiêu Đề -->
+        <div
+          class="bg-white rounded-2xl p-6 shadow-md border-2 border-blue-200"
+        >
+          <h2 class="text-xl font-bold text-eduPrimary mb-2 flex items-center">
+            <i class="fa-solid fa-newspaper text-eduSecondary mr-2.5"></i>
+            Tin tức
+          </h2>
+          <p class="text-sm text-slate-600 font-medium">
+            Tính năng hiện đang được phát triển, vui lòng quay lại sau để xem
+            các tin tức mới nhất về tuyển sinh.
+          </p>
+        </div>
+        <!-- Container Render Danh Sách Đề Án 2026 từ JS -->
+        <div
+          id="ts2026-container"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+        ></div>
+      </section>
+
+      <!-- Các mốc thời gian -->
+      <section id="sec-ts2026" class="tab-content block space-y-6">
+        <!-- Khung Tiêu Đề -->
+        <div
+          class="bg-white rounded-2xl p-6 shadow-md border-2 border-blue-200"
+        >
+          <h2 class="text-xl font-bold text-eduPrimary mb-2 flex items-center">
+            <i class="fa-solid fa-newspaper text-eduSecondary mr-2.5"></i>
+            Các mốc thời gian quan trọng
+          </h2>
+          <p class="text-sm text-slate-600 font-medium">
+            Tính năng hiện đang được phát triển, vui lòng quay lại sau để xem
+            các tin tức mới nhất về tuyển sinh.
+          </p>
+        </div>
+        <!-- Container Render Danh Sách Đề Án 2026 từ JS -->
+        <div
+          id="ts2026-container"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+        ></div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer
+      class="bg-white border-t-2 border-blue-200 text-slate-700 mt-12 shadow-inner"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div class="flex items-center space-x-3">
+            <div
+              class="bg-eduPrimary text-white px-3.5 py-2 rounded-lg font-black text-xl tracking-widest"
+            >
+              MITAU
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-eduPrimary">MienTayUni</h3>
+              <p class="text-xs text-slate-600 font-medium">
+                Nền Tảng Hỗ Trợ Tuyển Sinh Đại Học Khu Vực Đồng Bằng Sông Cửu
+                Long
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-100 border border-blue-300 text-eduPrimary px-4 py-2 rounded-xl font-bold text-xs tracking-wider shadow-sm"
+          >
+            <i class="fa-solid fa-code mr-1.5 text-eduSecondary"></i> Công Cụ
+            Thiết Kế Bởi MienTayUni
+          </div>
+        </div>
+        <div
+          class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-center text-xs font-semibold text-amber-900"
+        >
+          <i class="fa-solid fa-circle-info mr-1.5 text-amber-600"></i>
+          Thông tin cập nhật trên website được tổng hợp từ trang chính thức của
+          các Trường Đại học. MITAU không chịu hoàn toàn trách nhiệm về sự sai
+          sót.
+        </div>
+        <div
+          class="pt-4 border-t border-slate-200 text-center text-xs text-slate-500 font-medium"
+        >
+          <p>
+            © 2026 MienTayUni (MITAU). Dữ liệu được cập nhật từ thông báo điểm
+            chuẩn chính thức của các trường ĐH Miền Tây.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- SCRIPT RENDER TỰ ĐỘNG ĐỀ ÁN TUYỂN SINH 2026 -->
+    <script>
+      function renderTS2026() {
+        const container = document.getElementById("ts2026-container");
+        if (!container || typeof tuyenSinh2026Data === "undefined") return;
+        container.innerHTML = "";
+        tuyenSinh2026Data.forEach((item) => {
+          let ptList = (item.phuongThuc || [])
+            .map(
+              (pt) =>
+                `<li class="flex items-start text-xs text-slate-700"><i class="fa-solid fa-check text-emerald-500 mr-2 text-[10px] mt-1 shrink-0"></i><span>${pt}</span></li>`,
+            )
+            .join("");
+          container.innerHTML += `
+            <div class="bg-white rounded-2xl border border-blue-100 shadow-sm p-5 space-y-4 relative overflow-hidden flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <div class="flex items-center space-x-3">
+                    <span class="w-9 h-9 rounded-xl bg-blue-100 text-eduPrimary font-black flex items-center justify-center text-xs">
+                      ${item.schoolCode}
+                    </span>
+                    <div>
+                      <h3 class="font-bold text-sm text-slate-800">${item.schoolName}</h3>
+                      <span class="text-[11px] text-slate-400 font-medium">${item.province}</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-bold bg-blue-50 text-eduPrimary px-2.5 py-1 rounded-full border border-blue-200">
+                    Đề án 2026
+                  </span>
+                </div>
+                <div class="space-y-2.5">
+                  <div>
+                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Phương thức xét tuyển chính thức:</span>
+                    <ul class="space-y-1.5 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                      ${ptList}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-between mt-2">
+                <span class="text-xs text-slate-500 italic"><i class="fa-regular fa-clock mr-1 text-eduSecondary"></i>${item.lichTuyenSinh || "2026"}</span>
+                <a href="${item.fileDeAn}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-eduPrimary hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-xl border border-blue-200 transition">
+                  <i class="fa-solid fa-file-pdf mr-1.5 text-red-500 text-sm"></i> Xem Đề Án PDF
+                </a>
+              </div>
+            </div>`;
+        });
+      }
+      document.addEventListener("DOMContentLoaded", renderTS2026);
+    </script>
+  </body>
+</html>

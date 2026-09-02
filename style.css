@@ -1,0 +1,130 @@
+/* Tăng cỡ chữ toàn văn bản hệ thống */
+html {
+  font-size: 16px;
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+}
+body {
+  font-size: 1rem;
+}
+/* ===================================================
+   CẤU HÌNH TAB ĐIỀU HƯỚNG BẰNG SELECTOR ƯU TIÊN CAO NẤT
+   =================================================== */
+/* 1. Nút tab trạng thái bình thường (áp dụng cho Công cụ tính điểm khi ở trên trang) */
+header nav a.nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.625rem 1.125rem !important;
+  border-radius: 0.75rem !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #334155 !important;
+  background-color: #f1f5f9 !important;
+  border: 2px solid #e2e8f0 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  user-select: none !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.25s ease-in-out !important;
+}
+/* 2. RÊ CHUỘT VÀO TAB BÌNH THƯỜNG -> ĐỔI SANG MÀU XANH DẬM NHƯ KHIN CHỌN VÀO TRANG (#1e40af) */
+header nav a.nav-btn:hover {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  border-color: #1e40af !important;
+  font-weight: 900 !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.35) !important;
+}
+header nav a.nav-btn:hover i {
+  color: #fcd34d !important;
+}
+/* 3. CÁC TAB ĐƯỢC CHỌN CỐ ĐỊNH (Trang chủ, Điểm chuẩn, Đề án, Đề thi, Hướng dẫn, Tính điểm) */
+/* CÓ CLASS active-nav -> MÀU XANH CỐ ĐỊNH KHÔNG BIẾN MẤT */
+header nav a.nav-btn.active-nav {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  border-color: #1e40af !important;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.35) !important;
+}
+header nav a.nav-btn.active-nav i {
+  color: #fcd34d !important;
+}
+/* Rê chuột vào tab đang được chọn cố định */
+header nav a.nav-btn.active-nav:hover {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+  border-color: #1e3a8a !important;
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.5) !important;
+}
+/* Khung nhập liệu & tìm kiếm */
+.input-style,
+.search-input-box {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+.search-input-box:focus,
+.input-style:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+.official-calc-card {
+  padding: 1.125rem;
+  background-color: rgba(240, 249, 255, 0.8);
+  border: 2px solid #bfdbfe;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+.official-calc-card:hover {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+/* Custom Scrollbar & Modal */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+#custom-alert-modal > div,
+#custom-confirm-modal > div {
+  animation: fadeIn 0.3s ease-out;
+}
