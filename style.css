@@ -128,3 +128,45 @@ header nav a.nav-btn.active-nav:hover {
 #custom-confirm-modal > div {
   animation: fadeIn 0.3s ease-out;
 }
+/* ===================================================
+   CẤU HÌNH BỘ ĐẾM LƯỢT TRUY CẬP (VISIT COUNTER)
+   =================================================== */
+.visit-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #334155;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Biểu tượng con mắt */
+.visit-counter i {
+  color: #2563eb;
+  font-size: 1rem;
+  transition: color 0.25s ease-in-out;
+}
+
+/* Số lượt truy cập */
+.visit-counter strong {
+  color: #1e40af;
+  font-size: 0.95rem;
+}
+
+/* Hiệu ứng rê chuột vào bộ đếm */
+.visit-counter:hover {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.visit-counter:hover i {
+  color: #1e3a8a;
+}
