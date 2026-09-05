@@ -3168,3 +3168,48 @@ document.addEventListener("DOMContentLoaded", () => {
   renderTS2027();
   renderAspirations();
 });
+/* ===================================================
+   TÍNH NĂNG ĐẾM LƯỢT TRUY CẬP (DÙNG SEEYOUFARM)
+   =================================================== */
+async function initVisitCounter() {
+  const countElement = document.getElementById("visit-count");
+  if (!countElement) return;
+
+  // 1. Nếu là Admin thì không đếm
+  if (localStorage.getItem("isAdmin") === "true") {
+    countElement.innerText = "(Admin)";
+    return;
+  }
+
+  // 2. Nếu chạy ở môi trường Localhost thì không đếm
+  if (
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+  ) {
+    countElement.innerText = "(Local)";
+    return;
+  }
+
+  // Thay đường dẫn trang web của bạn vào tham số url bên dưới
+  const myWebsiteUrl = window.location.origin + window.location.pathname;
+
+  try {
+    // Đường dẫn API đếm lượt xem miễn phí cực kỳ ổn định
+    const response = await fetch(
+      `https://hits.seeyoufarm.com/api/count/incr/badge.json?url=${encodeURIComponent(myWebsiteUrl)}`,
+    );
+    const data = await response.json();
+
+    // Cập nhật số đếm vào HTML
+    if (data && data.value) {
+      countElement.innerText = data.value.toLocaleString("vi-VN");
+    } else {
+      countElement.innerText = "1";
+    }
+  } catch (error) {
+    console.error("Lỗi kết nối bộ đếm lượt truy cập:", error);
+    countElement.innerText = "1";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", initVisitCounter);
