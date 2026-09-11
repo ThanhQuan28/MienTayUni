@@ -80,6 +80,9 @@ header nav a.nav-btn.active-nav:hover {
   color: #1e293b;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .search-input-box:focus,
 .input-style:focus {
@@ -169,4 +172,387 @@ header nav a.nav-btn.active-nav:hover {
 
 .visit-counter:hover i {
   color: #1e3a8a;
+}
+
+/* ===================================================
+   CẤU HÌNH CÁC MỐC THỜI GIAN
+   =================================================== */
+/* Reset căn bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #eef5ff;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* Header & Navbar */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 5%;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 15px auto;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-badge {
+    background-color: #1e40af;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+}
+
+.brand-info h1 {
+    font-size: 20px;
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+.brand-info p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.user-badge {
+    background-color: #e0f2fe;
+    color: #0284c7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Navigation */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: #f1f5f9;
+    color: #475569;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    background-color: #e2e8f0;
+}
+
+.nav-item.active {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+/* Container chính */
+.main-container {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding: 0 20px;
+}
+
+/* Card Section tiêu đề */
+.section-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1e3a8a;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Grid lịch thi V-SAT */
+.vsat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Đợt thi Card */
+.vsat-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f0f4f8;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vsat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.vsat-card .dot-title {
+    color: #0284c7;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.vsat-info {
+    font-size: 14.5px;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.vsat-info p {
+    line-height: 1.5;
+}
+
+.vsat-info strong {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .vsat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .vsat-grid {
+        grid-template-columns: 1fr;
+    }
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+/*-- ======================================================
+LỊCH THI CÁC KỲ THI TRONG NĂM 2026
+========================================================== */
+/* Container & Layout */
+.location-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Accordion Card (Thẻ chứa đóng/mở) */
+.accordion-card {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Summary (Phần tiêu đề bấm vào) */
+.accordion-summary {
+  font-weight: 700;
+  color: #1e3a8a;
+  font-size: 16px;
+  outline: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Icons */
+.location-icon {
+  color: #ef4444;
+  margin-right: 8px;
+}
+
+.chevron-icon {
+  font-size: 14px;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+/* Hiệu ứng xoay icon mũi tên khi mở */
+details[open] .chevron-icon {
+  transform: rotate(180deg);
+}
+
+/* Nội dung chi tiết bên trong Accordion */
+.accordion-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 14.5px;
+}
+
+.accordion-details-lh {
+  line-height: 1.8;
+}
+
+.group-title {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.location-list {
+  padding-left: 20px;
+}
+
+.group-list {
+  margin-bottom: 12px;
+}
+/* ===================================================
+   FILE STYLESHEET RIÊNG CHO TRANG ĐỀ THI (dethi.css)
+   =================================================== */
+
+/* Container Khung tìm kiếm */
+.exam-search-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  transition: all 0.3s ease;
+}
+
+/* Ô nhập liệu tìm kiếm */
+.exam-input-field {
+  width: 100%;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.75rem; /* 12px */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #1e293b;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.exam-input-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Biểu tượng kính lúp bên trái ô input */
+.search-icon-left {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.875rem;
+  pointer-events: none;
+}
+
+/* Nút xóa nhanh từ khóa (X) */
+.clear-search-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background-color: #e2e8f0;
+  color: #64748b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.clear-search-btn:hover {
+  background-color: #cbd5e1;
+  color: #0f172a;
+}
+
+/* Ô Dropdown chọn môn thi */
+.exam-select-field {
+  width: 100%;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding-left: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.exam-select-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.select-icon-right {
+  position: absolute;
+  right: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+/* Màn hình thông báo không tìm thấy kết quả */
+.no-exam-found-state {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
