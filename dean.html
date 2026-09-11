@@ -60,17 +60,6 @@
               >
             </div>
           </a>
-          <!-- Nhúng Font Awesome (nếu trang web của bạn chưa có) -->
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          />
-
-          <!-- Thẻ hiển thị bộ đếm lượt truy cập -->
-          <div class="visit-counter">
-            <i class="fa-solid fa-eye"></i>
-            <span><strong id="visit-count">...</strong></span>
-          </div>
         </div>
       </div>
       <!-- Hàng 2: Thanh Tab Tính Năng -->
@@ -128,6 +117,89 @@
           </div>
         </div>
       </div>
+
+      <!-- BẢNG CÔNG CỤ LIÊN KẾT NỘI BỘ (YÊU CẦU MỚI) -->
+      <section
+        class="bg-white rounded-2xl p-6 shadow-md border-2 border-blue-200 space-y-4"
+      >
+        <h2 class="text-xl font-bold text-eduPrimary flex items-center">
+          <i class="fa-solid fa-link text-eduSecondary mr-2.5"></i>
+          Liên kết nội bộ Cổng Thông Tin
+        </h2>
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr
+                class="bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider border-b border-slate-200"
+              >
+                <th class="p-3 w-1/3">Mục liên kết</th>
+                <th class="p-3">Chi tiết / Các nội dung trực thuộc</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-sm">
+              <tr class="hover:bg-blue-50/40 transition">
+                <td class="p-3 font-bold text-eduPrimary">
+                  <a href="#sec-ts2026" class="hover:underline"
+                    >Thông tin đề án tuyển sinh 2026</a
+                  >
+                </td>
+                <td class="p-3 text-slate-600">
+                  Đề án tuyển sinh & phương thức xét tuyển các trường ĐH Miền
+                  Tây năm 2026
+                </td>
+              </tr>
+              <tr class="hover:bg-blue-50/40 transition">
+                <td class="p-3 font-bold text-eduPrimary">
+                  <a href="#sec-news" class="hover:underline">Tin tức</a>
+                </td>
+                <td class="p-3 text-slate-600">
+                  Cập nhật tin tức mới nhất về tuyển sinh và hướng nghiệp
+                </td>
+              </tr>
+              <tr class="hover:bg-blue-50/40 transition">
+                <td class="p-3 font-bold text-eduPrimary">
+                  <a href="#sec-moc-thoi-gian" class="hover:underline"
+                    >Các mốc thời gian quan trọng cập nhật năm 2026</a
+                  >
+                </td>
+                <td class="p-3 text-slate-600">
+                  <ul class="list-disc list-inside space-y-1 text-xs">
+                    <li>
+                      <a href="#vsat-ctu" class="text-blue-700 hover:underline"
+                        >Lịch thi V-SAT Đại học Cần Thơ cập nhật năm 2026</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#vsat-dthu" class="text-blue-700 hover:underline"
+                        >Lịch thi V-SAT Trường Đại học Đồng Tháp cập nhật năm
+                        2026</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#vsat-tvu" class="text-blue-700 hover:underline"
+                        >Lịch thi V-SAT Đại học Trà Vinh cập nhật năm 2026</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#dgnl-dot1" class="text-blue-700 hover:underline"
+                        >Phân bố địa điểm tổ chức thi ĐGNL ĐHQG-HCM Đợt 1 Năm
+                        2026</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#dgnl-dot2" class="text-blue-700 hover:underline"
+                        >Phân bố địa điểm tổ chức thi ĐGNL ĐHQG-HCM Đợt 2 Năm
+                        2026</a
+                      >
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <!-- ĐỀ ÁN TUYỂN SINH 2026 -->
       <section id="sec-ts2026" class="tab-content block space-y-6">
         <!-- Khung Tiêu Đề -->
@@ -149,9 +221,8 @@
           class="grid grid-cols-1 md:grid-cols-2 gap-6"
         ></div>
       </section>
-
       <!-- Tin tức -->
-      <section id="sec-ts2026" class="tab-content block space-y-6">
+      <section id="sec-news" class="tab-content block space-y-6">
         <!-- Khung Tiêu Đề -->
         <div
           class="bg-white rounded-2xl p-6 shadow-md border-2 border-blue-200"
@@ -165,33 +236,697 @@
             các tin tức mới nhất về tuyển sinh.
           </p>
         </div>
-        <!-- Container Render Danh Sách Đề Án 2026 từ JS -->
-        <div
-          id="ts2026-container"
-          class="grid grid-cols-1 md:grid-cols-2 gap-6"
-        ></div>
       </section>
-
       <!-- Các mốc thời gian -->
-      <section id="sec-ts2026" class="tab-content block space-y-6">
+      <section id="sec-moc-thoi-gian" class="tab-content block space-y-6">
         <!-- Khung Tiêu Đề -->
         <div
           class="bg-white rounded-2xl p-6 shadow-md border-2 border-blue-200"
         >
           <h2 class="text-xl font-bold text-eduPrimary mb-2 flex items-center">
-            <i class="fa-solid fa-newspaper text-eduSecondary mr-2.5"></i>
-            Các mốc thời gian quan trọng
+            <i class="fa-solid fa-clock text-eduSecondary mr-2.5"></i>
+            Các mốc thời gian quan trọng cập nhật năm 2026
           </h2>
           <p class="text-sm text-slate-600 font-medium">
-            Tính năng hiện đang được phát triển, vui lòng quay lại sau để xem
-            các tin tức mới nhất về tuyển sinh.
+            Các mốc thời gian bên dưới là thời gian chính thức của năm 2026. Đây
+            chưa phải là thời gian chính thức của năm 2027
           </p>
         </div>
-        <!-- Container Render Danh Sách Đề Án 2026 từ JS -->
-        <div
-          id="ts2026-container"
-          class="grid grid-cols-1 md:grid-cols-2 gap-6"
-        ></div>
+        <!-- ======================================================
+       LỊCH THI CÁC KỲ THI TRONG NĂM 2026
+       ==========================================================-->
+        <!-- CHI TIẾT MỐC THỜI GIAN THI VSAT ĐH CẦN THƠ 2026 -->
+        <main id="vsat-ctu" class="main-container">
+          <!-- Tiêu đề phần Lịch thi -->
+          <section class="section-card">
+            <div class="section-title">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Lịch thi V-SAT Đại học Cần Thơ cập nhật năm 2026</span>
+            </div>
+            <p class="section-subtitle">
+              Các mốc thời gian bên dưới là thời gian chính thức của năm 2026.
+            </p>
+          </section>
+          <!-- Lưới hiển thị các đợt thi (3 cột) -->
+          <section class="vsat-grid">
+            <!-- Đợt 1 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 1</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 30/01/2026 - 01/02/2026</p>
+                <p><strong>Đăng ký:</strong> 02/01/2026 – 20/01/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 23/02/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 2 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 2</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 06/03/2026 - 08/03/2026</p>
+                <p><strong>Đăng ký:</strong> 02/02/2026 – 17:00 27/02/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 20/03/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 3 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 3</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 09/04/2026 - 12/04/2026</p>
+                <p><strong>Đăng ký:</strong> 09/03/2026 – 17:00 31/03/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 24/04/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 4 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 4</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 07/05/2026 - 10/05/2026</p>
+                <p><strong>Đăng ký:</strong> 08/04/2026 – 17:00 27/04/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 22/05/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 5 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 5</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 27/05/2026 - 31/05/2026</p>
+                <p><strong>Đăng ký:</strong> 28/04/2026 – 17:00 17/05/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 12/06/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 6 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 6</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 17/06/2026 - 21/06/2026</p>
+                <p><strong>Đăng ký:</strong> 18/05/2026 – 17:00 06/06/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 28/06/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 7 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 7</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 30/06/2026 - 05/07/2026</p>
+                <p><strong>Đăng ký:</strong> 07/06/2026 – 23:59 20/06/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> 09/07/2026</p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- CHI TIẾT MỐC THỜI GIAN THI VSAT ĐH ĐỒNG THÁP 2026 -->
+        <main id="vsat-dthu" class="main-container">
+          <!-- Tiêu đề phần Lịch thi -->
+          <section class="section-card">
+            <div class="section-title">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span
+                >Lịch thi V-SAT Trường Đại học Đồng Tháp cập nhật năm 2026</span
+              >
+            </div>
+            <p class="section-subtitle">
+              Các mốc thời gian bên dưới là thời gian chính thức của năm 2026.
+            </p>
+          </section>
+          <!-- Lưới hiển thị các đợt thi (3 cột) -->
+          <section class="vsat-grid">
+            <!-- Đợt 1 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 1</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 06, 07, 08/02/2026</p>
+                <p><strong>Đăng ký:</strong> Hạn cuối 26/01/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 16/02/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 2 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 2</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 13, 14, 15/03/2026</p>
+                <p><strong>Đăng ký:</strong> Hạn cuối 02/03/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 23/03/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 3 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 3</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 10, 11, 12/04/2026</p>
+                <p><strong>Đăng ký:</strong> Hạn cuối 30/03/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 20/04/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 4 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 4</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 14, 15, 16, 17/05/2026</p>
+                <p><strong>Đăng ký:</strong> Hạn cuối 04/05/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 25/05/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 5 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 5</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 01, 02, 03, 04/06/2026</p>
+                <p><strong>Đăng ký:</strong> Hạn cuối 18/05/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 11/06/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 6 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 6</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 02, 03, 04, 05/07/2026</p>
+                <p><strong>Đăng ký:</strong> Hạn cuối 22/06/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 13/07/2026</p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- CHI TIẾT MỐC THỜI GIAN THI VSAT ĐH TRÀ VINH 2026 -->
+        <main id="vsat-tvu" class="main-container">
+          <!-- Tiêu đề phần Lịch thi -->
+          <section class="section-card">
+            <div class="section-title">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Lịch thi V-SAT Đại học Trà Vinh cập nhật năm 2026</span>
+            </div>
+            <p class="section-subtitle">
+              Địa điểm tổ chức: Khu 1 - Đại học Trà Vinh (126 Nguyễn Thiện
+              Thành, Phường Hòa Thuận, tỉnh Vĩnh Long).
+            </p>
+          </section>
+          <!-- Lưới hiển thị các đợt thi (3 cột) -->
+          <section class="vsat-grid">
+            <!-- Đợt 1 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 1</h3>
+              <div class="vsat-info">
+                <p>
+                  <strong>Ngày thi:</strong> 30 - 31/05/2026 hoặc 01 -
+                  02/06/2026
+                </p>
+                <p><strong>Hạn đăng ký:</strong> 20/05/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 01/06/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 2 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 2</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 20 - 21 - 22 - 23/07/2026</p>
+                <p><strong>Hạn đăng ký:</strong> 10/07/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 03/08/2026</p>
+              </div>
+            </div>
+            <!-- Đợt 3 -->
+            <div class="vsat-card">
+              <h3 class="dot-title">Đợt 3</h3>
+              <div class="vsat-info">
+                <p><strong>Ngày thi:</strong> 30 - 31/08/2026</p>
+                <p><strong>Hạn đăng ký:</strong> 20/08/2026</p>
+                <p><strong>Cấp bảng điểm:</strong> Dự kiến 10/09/2026</p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- PHÂN BỐ ĐỊA ĐIỂM THI ĐGNL ĐHQG-HCM ĐỢT 1 -->
+        <main id="dgnl-dot1" class="main-container">
+          <!-- Tiêu đề phần Địa điểm thi -->
+          <section class="section-card">
+            <div class="section-title">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span
+                >Phân bố địa điểm tổ chức thi ĐGNL ĐHQG-HCM Đợt 1 Năm 2026</span
+              >
+            </div>
+            <p class="section-subtitle">
+              <strong>Ngày thi tất cả điểm cầu:</strong> 24/05/2026 |
+              <strong>Tổng cộng:</strong> 54 đơn vị phối hợp tổ chức
+            </p>
+          </section>
+          <!-- Danh sách các tỉnh/thành phố dạng Accordion (Sổ xuống) -->
+          <section class="location-accordion-container">
+            <!-- 1. TP. HỒ CHÍ MINH -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> TP. Hồ
+                  Chí Minh</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <p class="group-title">Các đơn vị thành viên ĐHQG-HCM:</p>
+                <ul class="location-list group-list">
+                  <li>Trường ĐH Bách Khoa</li>
+                  <li>Trường ĐH Công nghệ Thông tin</li>
+                  <li>Trường ĐH Khoa học Tự nhiên</li>
+                  <li>Trường ĐH Khoa học Xã hội và Nhân văn</li>
+                  <li>Trường ĐH Kinh tế - Luật</li>
+                  <li>Trường ĐH Quốc tế</li>
+                </ul>
+                <p class="group-title">Các đơn vị ngoài ĐHQG-HCM:</p>
+                <ul class="location-list">
+                  <li>Trường ĐH Công nghệ Kỹ thuật TP.HCM</li>
+                  <li>Trường ĐH Công nghệ Sài Gòn</li>
+                  <li>Trường ĐH Công nghiệp TP.HCM</li>
+                  <li>Trường ĐH Công Thương TP.HCM</li>
+                  <li>Trường ĐH Hoa Sen</li>
+                  <li>Trường ĐH Nguyễn Tất Thành</li>
+                  <li>Trường ĐH Nông Lâm TP.HCM</li>
+                  <li>Trường ĐH Quốc tế Hồng Bàng</li>
+                  <li>Trường ĐH Tài chính - Marketing</li>
+                  <li>Trường ĐH Văn Lang</li>
+                  <li>Trường ĐH Bình Dương</li>
+                  <li>Trường ĐH Quốc tế Miền Đông</li>
+                  <li>Trường ĐH Thủ Dầu Một</li>
+                  <li>Trường ĐH Bà Rịa - Vũng Tàu</li>
+                  <li>Trường ĐH Dầu khí Việt Nam</li>
+                  <li>Trường CĐ Sư phạm BR-VT</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 2. HUẾ -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i>
+                  Huế</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Đại học Huế</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 3. ĐÀ NẴNG -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đà
+                  Nẵng</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Đại học Đà Nẵng</li>
+                  <li>Trường ĐH Quảng Nam</li>
+                  <li>Trường ĐH Phan Châu Trinh</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 4. QUẢNG NGÃI -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Quảng
+                  Ngãi</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Phạm Văn Đồng</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 5. GIA LAI -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Gia
+                  Lai</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Quang Trung</li>
+                  <li>Trường ĐH Quy Nhơn</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 6. ĐẮK LẮK -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đắc
+                  Lắc</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Tây Nguyên</li>
+                  <li>Trường ĐH Y Dược Buôn Ma Thuột</li>
+                  <li>Trường ĐH Phú Yên</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 7. KHÁNH HÒA -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Khánh
+                  Hòa</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Khánh Hòa</li>
+                  <li>Trường ĐH Nha Trang</li>
+                  <li>Phân hiệu Trường ĐH Nông Lâm tại Ninh Thuận</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 8. LÂM ĐỒNG -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Lâm
+                  Đồng</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Đà Lạt</li>
+                  <li>Trường ĐH Phan Thiết</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 9. TÂY NINH -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Tây
+                  Ninh</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường CĐ Sư phạm Tây Ninh</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 10. ĐỒNG NAI -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đồng
+                  Nai</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Công nghệ Đồng Nai</li>
+                  <li>Trường ĐH Công nghệ Miền Đông</li>
+                  <li>Trường ĐH Lạc Hồng</li>
+                  <li>Trường ĐH Lâm nghiệp-Phân hiệu Đồng Nai</li>
+                  <li>Trường CĐ Bình Phước</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 11. ĐỒNG THÁP -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đồng
+                  Tháp</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Đồng Tháp</li>
+                  <li>Trường ĐH Tiền Giang</li>
+                  <li>Trường CĐ Tiền Giang</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 12. AN GIANG -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> An
+                  Giang</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH An Giang</li>
+                  <li>Trường ĐH Kiên Giang</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 13. CẦN THƠ -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Cần
+                  Thơ</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Nam Cần Thơ</li>
+                  <li>Trường ĐH Tây Đô</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 14. VĨNH LONG -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Vĩnh
+                  Long</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Sư phạm Kỹ thuật Vĩnh Long</li>
+                  <li>Trường ĐH Xây dựng Miền Tây</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 15. CÀ MAU -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Cà
+                  Mau</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Bạc Liêu</li>
+                  <li>Trường CĐ Cộng đồng Cà Mau</li>
+                </ul>
+              </div>
+            </details>
+          </section>
+        </main>
+        <!-- PHÂN BỐ ĐỊA ĐIỂM THI ĐGNL ĐHQG-HCM ĐỢT 2 -->
+        <main id="dgnl-dot2" class="main-container">
+          <!-- Tiêu đề phần Địa điểm thi -->
+          <section class="section-card">
+            <div class="section-title">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span
+                >Phân bố địa điểm tổ chức thi ĐGNL ĐHQG-HCM Đợt 2 Năm 2026</span
+              >
+            </div>
+            <p class="section-subtitle">
+              <strong>Ngày thi tất cả điểm cầu:</strong> 24/05/2026 |
+              <strong>Tổng cộng:</strong> 38 đơn vị phối hợp tổ chức
+            </p>
+          </section>
+          <!-- Danh sách các tỉnh/thành phố dạng Accordion (Sổ xuống) -->
+          <section class="location-accordion-container">
+            <!-- 1. TP. HỒ CHÍ MINH -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> TP. Hồ
+                  Chí Minh</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details accordion-details-lh">
+                <p class="group-title">Các đơn vị thành viên ĐHQG-HCM:</p>
+                <ul class="location-list group-list">
+                  <li>Trường ĐH Bách Khoa</li>
+                  <li>Trường ĐH Công nghệ Thông tin</li>
+                  <li>Trường ĐH Khoa học Tự nhiên</li>
+                  <li>Trường ĐH Khoa học Xã hội và Nhân văn</li>
+                  <li>Trường ĐH Kinh tế - Luật</li>
+                  <li>Trường ĐH Quốc tế</li>
+                </ul>
+                <p class="group-title">Các đơn vị ngoài ĐHQG-HCM:</p>
+                <ul class="location-list">
+                  <li>Trường ĐH Công nghệ Kỹ thuật TP.HCM</li>
+                  <li>Trường ĐH Công nghệ Sài Gòn</li>
+                  <li>Trường ĐH Công nghiệp TP.HCM</li>
+                  <li>Trường ĐH Công Thương TP.HCM</li>
+                  <li>Trường ĐH Giao thông vận tải TP.HCM</li>
+                  <li>Trường ĐH Hoa Sen</li>
+                  <li>Trường ĐH Nguyễn Tất Thành</li>
+                  <li>Trường ĐH Ngoại ngữ - Tin học</li>
+                  <li>Trường ĐH Nông Lâm TP.HCM</li>
+                  <li>Trường ĐH Quốc tế Hồng Bàng</li>
+                  <li>Trường ĐH Tài chính - Marketing</li>
+                  <li>Trường ĐH Tôn Đức Thắng</li>
+                  <li>Trường ĐH Văn Lang</li>
+                  <li>Trường ĐH Quốc tế Miền Đông</li>
+                  <li>Trường ĐH Thủ Dầu Một</li>
+                  <li>Trường ĐH Bà Rịa - Vũng Tàu</li>
+                  <li>Trường ĐH Dầu khí Việt Nam</li>
+                  <li>Trường CĐ Sư phạm BR-VT</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 2. HUẾ -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i>
+                  Huế</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Đại học Huế</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 5. GIA LAI -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Gia
+                  Lai</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Quang Trung</li>
+                  <li>Trường ĐH Quy Nhơn</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 6. ĐẮK LẮK -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đắc
+                  Lắc</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Tây Nguyên</li>
+                  <li>Trường ĐH Y Dược Buôn Ma Thuột</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 7. KHÁNH HÒA -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Khánh
+                  Hòa</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Khánh Hòa</li>
+                  <li>Trường ĐH Nha Trang</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 8. LÂM ĐỒNG -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Lâm
+                  Đồng</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Đà Lạt</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 10. ĐỒNG NAI -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đồng
+                  Nai</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Công nghệ Đồng Nai</li>
+                  <li>Trường ĐH Công nghệ Miền Đông</li>
+                  <li>Trường ĐH Lạc Hồng</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 11. ĐỒNG THÁP -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> Đồng
+                  Tháp</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH Đồng Tháp</li>
+                  <li>Trường ĐH Tiền Giang</li>
+                </ul>
+              </div>
+            </details>
+            <!-- 12. AN GIANG -->
+            <details class="section-card accordion-card">
+              <summary class="accordion-summary">
+                <span
+                  ><i class="fa-solid fa-location-dot location-icon"></i> An
+                  Giang</span
+                >
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </summary>
+              <div class="accordion-details">
+                <ul class="location-list">
+                  <li>Trường ĐH An Giang</li>
+                </ul>
+              </div>
+            </details>
+          </section>
+        </main>
       </section>
     </main>
     <!-- FOOTER -->
@@ -224,12 +959,20 @@
           </div>
         </div>
         <div
-          class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-center text-xs font-semibold text-amber-900"
+          class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-center text-xs font-semibold text-amber-900 flex flex-col sm:flex-row items-center justify-between gap-3"
         >
-          <i class="fa-solid fa-circle-info mr-1.5 text-amber-600"></i>
-          Thông tin cập nhật trên website được tổng hợp từ trang chính thức của
-          các Trường Đại học. MITAU không chịu hoàn toàn trách nhiệm về sự sai
-          sót.
+          <div class="text-left">
+            <i class="fa-solid fa-circle-info mr-1.5 text-amber-600"></i>
+            Thông tin cập nhật trên website được tổng hợp từ trang chính thức
+            của các Trường Đại học. MITAU không chịu hoàn toàn trách nhiệm về sự
+            sai sót.
+          </div>
+          <div class="flex items-center space-x-4 shrink-0 text-slate-700">
+            <span class="inline-flex items-center" title="Lượt xem website">
+              <i class="fa-solid fa-eye text-blue-600 mr-1.5"></i>
+              <strong id="footer-visit-count">...</strong>
+            </span>
+          </div>
         </div>
         <div
           class="pt-4 border-t border-slate-200 text-center text-xs text-slate-500 font-medium"
