@@ -2966,7 +2966,7 @@ const tuyenSinh2026Data = [
       "Phương thức 1: Tuyển thẳng, ưu tiên xét tuyển theo Quy chế tuyển sinh của Bộ GD&ĐT",
       "Phương thức 2: Xét điểm thi THPT năm 2026",
       "Phương thức 3: Xét điểm học tập THPT - Điểm học bạ (Điểm quy đổi)",
-      "Phương thức 4: Xét diém thi V-SAT (Điểm quy đổi)",
+      "Phương thức 4: Xét điểm thi V-SAT (Điểm quy đổi)",
       "Phương thức 5: Tuyển chọn vào chương trình tiên tiến và chương trình chất lượng cao",
     ],
     lichTuyenSinh: "Công bố chính thức 2026",
